@@ -1,3 +1,5 @@
+# English
+
 # Updater
 This program is java program updater.
 
@@ -54,3 +56,62 @@ root
 This program does not have its own update feature.  
 Check the SHA-256 value from the source Java program and update it.  
 The SHA-256 value is described in sum.txt.
+
+# 日本語
+
+# Updater
+このプログラムはJavaのプログラムを更新するプログラムです。
+
+# 使い方
+このプログラムはコマンドから実行します。
+```
+java -jar Updater.jar <Download URL> <Type> <Title> <Exec Command>
+```
+コマンドを実行するにはjava.lang.Runtime#getRuntime()#exec()を使用してください。  
+また、使用するにはコンピューターにJavaのパスを通しておく必要があります。
+
+## Download URL
+Download URLは新しいファイルのダウンロード元URLです。
+
+例: https://github.com/kusaanko/Updater/release/download/1.0.0/Updater.jar
+
+## Type
+Typeは置き換える方法です。
+
+**replace:** から始まるコマンドはjar、exe等解凍する必要がない場合に使用します。  
+このコマンドの後ろには置き換えるファイル名を指定します。
+
+例: replace:Executable.jar
+
+**zip:** から始まるコマンドはzipファイルをダウンロードするのに使用します。  
+このコマンドの後ろには何も書く必要はありません。
+
+例: zip:
+
+## Title
+Titleはタイトルバーに表示されます。  
+以下のように表示されます。
+
+Updater - **Title**
+
+## Exec Command
+Exec Commandは更新が完了したあとに実行されるコマンドです。
+
+例: "java -jar Executable.jar"
+
+## Updaterを起動する例
+```Java
+java.lang.Runtime.getRuntime().exec("java -jar Updater.jar https://github.com/example/example/release/download/1.0.0/example.jar replace:example.jar example.jar \"java -jar example.jar\"", null, new File("./"));
+```
+
+# ファイル配置
+root  
+├ libs/  
+├ Updater.jar  
+├ Executable.jar  
+└ etc...
+
+# 注意
+このプログラムは自分自身を更新する機能はついていません。  
+UpdaterのSHA-256値を見てJavaプログラムで更新してください。  
+SHA-256値はsum.txtを見てください。
