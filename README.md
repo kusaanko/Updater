@@ -14,7 +14,7 @@ Also, the computer that uses this program needs to be through the Java path.
 ## Download URL
 Download URL is URL of the new file download source.
 
-For example: https://github.com/kusaanko/Updater/release/download/1.0.0/Updater.jar
+For example: https://github.com/kusaanko/Updater/release/download/1.0/Updater.jar
 
 ## Type
 Type is type of replace way.
@@ -42,7 +42,7 @@ For example: "java -jar Executable.jar"
 
 ## Example of program to start Updater
 ```Java
-java.lang.Runtime.getRuntime().exec("java -jar Updater.jar https://github.com/example/example/release/download/1.0.0/example.jar replace:example.jar example.jar \"java -jar example.jar\"", null, new File("./"));
+java.lang.Runtime.getRuntime().exec("java -jar Updater.jar https://github.com/example/example/release/download/1.0/example.jar replace:example.jar example.jar \"java -jar example.jar\"", null, new File("./"));
 ```
 
 # File Placement
@@ -73,7 +73,7 @@ java -jar Updater.jar <Download URL> <Type> <Title> <Exec Command>
 ## Download URL
 Download URLは新しいファイルのダウンロード元URLです。
 
-例: https://github.com/kusaanko/Updater/release/download/1.0.0/Updater.jar
+例: https://github.com/kusaanko/Updater/release/download/1.0/Updater.jar
 
 ## Type
 Typeは置き換える方法です。
@@ -101,7 +101,7 @@ Exec Commandは更新が完了したあとに実行されるコマンドです�
 
 ## Updaterを起動する例
 ```Java
-java.lang.Runtime.getRuntime().exec("java -jar Updater.jar https://github.com/example/example/release/download/1.0.0/example.jar replace:example.jar example.jar \"java -jar example.jar\"", null, new File("./"));
+java.lang.Runtime.getRuntime().exec("java -jar Updater.jar https://github.com/example/example/release/download/1.0/example.jar replace:example.jar example.jar \"java -jar example.jar\"", null, new File("./"));
 ```
 
 # ファイル配置
