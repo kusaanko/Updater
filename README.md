@@ -11,7 +11,7 @@ java -jar Updater.jar <Download URL> <Type> <Title> <Exec Command>
 Execute the command using java.lang.Runtime#getRuntime()#exec().  
 Also, the computer that uses this program needs to be through the Java path.
 
-You can use it by adding it to your source code.
+You can use it by adding it to your source code.  
 It can be used like the command line by calling io.github.kusaanko.Updater#main(String[] args).
 
 ## Download URL
@@ -73,7 +73,7 @@ java -jar Updater.jar <Download URL> <Type> <Title> <Exec Command>
 コマンドを実行するにはjava.lang.Runtime#getRuntime()#exec()を使用してください。  
 また、使用するにはコンピューターにJavaのパスを通しておく必要があります。
 
-あなたのソースコードに追加しても使えます。
+あなたのソースコードに追加しても使えます。  
 io.github.kusaanko.Updater#main(String[] args)を呼び出すことでコマンドラインと同様に使えます。
 
 ## Download URL
