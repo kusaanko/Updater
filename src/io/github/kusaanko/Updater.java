@@ -1,3 +1,4 @@
+package io.github.kusaanko;
 
 import javax.swing.*;
 import java.awt.*;
@@ -24,7 +25,7 @@ import java.util.zip.ZipInputStream;
  *
  */
 
-public class Main extends JDialog {
+public class Updater extends JDialog {
     public static void main(String[] args) {
         if(args.length>=4) {
             try {
@@ -32,13 +33,13 @@ public class Main extends JDialog {
             } catch (ClassNotFoundException | InstantiationException | UnsupportedLookAndFeelException | IllegalAccessException e) {
                 e.printStackTrace();
             }
-            new Main(args);
+            new Updater(args);
         }else {
             System.err.println("Args: <Download URL> <Type> <Title> <Exec Command>");
         }
     }
 
-    public Main(String[] args) {
+    public Updater(String[] args) {
         JProgressBar progressBar = new JProgressBar();
         JLabel status = new JLabel("Download Now...");
         JPanel panel = new JPanel(new BorderLayout());
@@ -90,7 +91,7 @@ public class Main extends JDialog {
                     }else {
                         status.setText("Error: HTTP Status "+conn.getResponseCode());
                         status.setForeground(Color.RED);
-                        Main.this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+                        Updater.this.setDefaultCloseOperation(EXIT_ON_CLOSE);
                     }
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -119,7 +120,7 @@ public class Main extends JDialog {
                     }else {
                         status.setText("Error: HTTP Status "+conn.getResponseCode());
                         status.setForeground(Color.RED);
-                        Main.this.setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
+                        Updater.this.setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
                         this.addWindowListener(new WindowAdapter() {
                             @Override
                             public void windowClosing(WindowEvent e) {
@@ -139,7 +140,7 @@ public class Main extends JDialog {
             }catch (Exception e) {
                 status.setText(e.getClass()+": "+e.getLocalizedMessage());
                 status.setForeground(Color.RED);
-                Main.this.setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
+                Updater.this.setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
                 this.addWindowListener(new WindowAdapter() {
                     @Override
                     public void windowClosing(WindowEvent e) {
