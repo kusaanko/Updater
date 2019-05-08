@@ -1,3 +1,0 @@
-Manifest-Version: 1.0
-io.github.kusaanko.Updater-Class: io.github.kusaanko.Updater
-
