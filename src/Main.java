@@ -15,6 +15,15 @@ import java.nio.file.Paths;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 
+/*
+ * Updater
+ *
+ * Copyright (c) 2019 Kusaanko.
+ * Released under the Apache License 2.0 license.
+ * see http://www.apache.org/licenses/LICENSE-2.0
+ *
+ */
+
 public class Main extends JDialog {
     public static void main(String[] args) {
         if(args.length>=4) {
